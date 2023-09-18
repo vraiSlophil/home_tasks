@@ -11,7 +11,7 @@ if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
         $error = "Veuillez entrer un mot de passe.";
     } else {
         $user = new User($_POST["login_username"], $_POST["login_password"]);
-        $result = $db->executeQuery("SELECT * FROM users WHERE username = :username AND password = :password", [
+        $result = $database->executeQuery("SELECT * FROM users WHERE username = :username AND password = :password", [
             "username" => $user->getUsername(),
             "password" => $user->getPassword()
         ]);
