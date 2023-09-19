@@ -20,14 +20,8 @@ class Database {
         $this->password = $password;
         $this->database = $database;
 
-        // Vérifie si une connexion existe déjà
-        if ($this->conn === null) {
-            // Initialise la connexion à la base de données uniquement si elle n'existe pas
-            $this->conn = new PDO("mysql:host=$this->host;dbname=$this->database", $this->username, $this->password);
-
-            // Configure PDO pour générer des exceptions en cas d'erreur SQL
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        }
+        $this->conn = new PDO("mysql:host=$this->host;dbname=$this->database", $this->username, $this->password);
+        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
     /**

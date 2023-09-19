@@ -10,11 +10,14 @@
     <title>Connexion</title>
 </head>
 <body>
-
+<?php
+if (isset($error)) {
+?>
+<section class="error"><?= $error; ?></section>
+<?php } ?>
 <section class="login">
     <form method="post" action="">
         <img src="../public/media/images/user.svg" alt="User" class="user">
-
         <input type="text" name="login_username" placeholder="Nom d'utilisateur" required>
         <input type="password" name="login_password" placeholder="Mot de passe" required>
         <div class="buttons">
@@ -22,11 +25,19 @@
             <button type="submit" name="login">Connexion</button>
         </div>
     </form>
-
-
 </section>
-<section class="register hide"></section>
+<section class="register hide">
+    <form method="post" action="">
+        <img src="../public/media/images/user.svg" alt="User" class="user">
+        <input type="text" name="register_username" placeholder="Nom d'utilisateur" required>
+        <input type="password" name="register_password" placeholder="Mot de passe" required>
+        <div class="buttons">
+            <button type="button" class="login">J'ai déjà un compte</button>
+            <button type="submit" name="login">Connexion</button>
+        </div>
+    </form>
+</section>
 
-
+<script type="text/javascript" src="../public/media/script/login.js"></script>
 </body>
 </html>

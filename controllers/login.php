@@ -1,5 +1,8 @@
 <?php
 //$currentPage = $_SERVER['SCRIPT_NAME'];
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 $mediaPath = "../views/media/";
 
@@ -10,6 +13,12 @@ if (isset($_POST["login_username"]) && isset($_POST["login_password"])) {
     } else if($_POST["login_password"] == "") {
         $error = "Veuillez entrer un mot de passe.";
     } else {
+        require_once "../models/utils/User.php";
+        require_once "../models/utils/Database.php";
+        require_once "../models/utils/database_infos.php";
+
+        $database = new Database($host, $username, $password, $dtbase);
+
         $user = new User($_POST["login_username"], $_POST["login_password"]);
         $result = $database->executeQuery("SELECT * FROM users WHERE username = :username AND password = :password", [
             "username" => $user->getUsername(),

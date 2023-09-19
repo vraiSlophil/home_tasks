@@ -20,7 +20,7 @@ section.login, section.register {
     -10px -10px 20px #ffffff;
 }
 
-.hide {
+section.hide {
     display: none !important;
 }
 
@@ -32,11 +32,13 @@ section.register > form {
     flex-direction: column;
 }
 
+section.register > form > img,
 section.login > form > img {
     border-radius: 50%;
     margin: 1em;
 }
 
+section.register > form > input,
 section.login > form > input {
     margin: 1em 0;
     padding: 1em 1.5em;
@@ -45,6 +47,7 @@ section.login > form > input {
     inset -5px -5px 11px #ffffff;
 }
 
+section.register > form > div.buttons,
 section.login > form > div.buttons {
     display: flex;
     justify-content: space-between;
@@ -55,12 +58,14 @@ section.login > form > div.buttons {
     margin-top: 1em;
 }
 
+section.register > form > div.buttons > button:active,
 section.login > form > div.buttons > button:active {
     box-shadow: inset 5px 5px 11px #d1d1d1,
     inset -5px -5px 11px #ffffff;
     transition: 200ms;
 }
 
+section.register > form > div.buttons > button,
 section.login > form > div.buttons > button {
     background-color: #fff;
     border-radius: 0.8em;
