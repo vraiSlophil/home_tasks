@@ -8,16 +8,21 @@
 class User {
     private string $username;
     private string $password;
+    private string $token;
+
+    private int $id;
 
     /**
      * Constructeur de la classe User.
      *
      * @param string $username Le nom d'utilisateur de l'utilisateur.
      * @param string $password Le mot de passe de l'utilisateur.
+     * @throws Exception
      */
     public function __construct(string $username, string $password) {
         $this->username = $username;
-        $this->password = $password;
+        $this->password = hash("sha256", $password);
+        $this->token = bin2hex(random_bytes(32));
     }
 
     /**
@@ -57,6 +62,17 @@ class User {
      */
     public function setPassword(string $password): void
     {
-        $this->password = $password;
+        $this->password = hash("sha256", $password);
     }
+
+    /**
+     * Obtient le token de l'utilisateur.
+     *
+     * @return string Le token.
+     */
+    public function getToken(): string
+    {
+        return $this->token;
+    }
+
 }

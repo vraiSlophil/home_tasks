@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="96pt" height="96pt" version="1.0" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
-    <g transform="translate(0 96) scale(.1 -.1)">
-        <path d="m412 869c-48-14-109-80-123-131-23-89 12-182 88-229 57-36 154-34 210 3 62 41 88 90 88 168 0 77-26 127-85 166-43 29-125 39-178 23zm136-69c42-26 72-76 72-120s-30-94-72-120c-117-71-259 71-188 188 26 42 76 72 120 72 19 0 50-9 68-20z"/>
-        <path d="m185 375c-19-18-25-35-25-70 0-63 20-105 70-148 63-54 125-72 250-72 121 0 184 17 244 67 74 61 100 175 51 223l-24 25h-271-271l-24-25zm553-75c4-53-28-97-96-128-50-23-70-26-162-27-93 0-111 3-162 27-38 17-64 38-78 60-19 32-27 88-13 102 4 3 119 5 257 4l251-3 3-35z"/>
-    </g>
+<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

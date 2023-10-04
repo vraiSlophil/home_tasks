@@ -29,9 +29,9 @@ class Database {
      *
      * @param string $query La requête SQL à exécuter.
      * @param array $params Les paramètres à lier à la requête (facultatif).
-     * @return array|false Le résultat de la requête en tant que tableau associatif ou une chaîne d'erreur en cas d'erreur.
+     * @return Exception|PDOException Le résultat de la requête en tant que tableau associatif ou une chaîne d'erreur en cas d'erreur.
      */
-    public function executeQuery(string $query, array $params = []): false|array|string
+    public function executeQuery(string $query, array $params = []): array|PDOException
     {
         try {
             $stmt = $this->conn->prepare($query);
@@ -39,7 +39,7 @@ class Database {
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
             // Enregistrez l'erreur ou renvoyez un message d'erreur explicite
-            return 'Erreur de base de données : ' . $e->getMessage();
+            return $e;
         }
     }
 

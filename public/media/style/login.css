@@ -3,9 +3,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #eeeeee;
+    color: #333333;
 }
 
-section.login, section.register {
+section.login,
+section.error,
+section.register {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +17,19 @@ section.login, section.register {
     width: 30em;
     /*max-width: 30em;*/
     max-width: calc(100vw - 2em);
-    margin: 0 auto;
+    margin: 0.5em auto;
     padding: 1.5em;
     border-radius: 0.8em;
-    box-shadow:  10px 10px 20px #e0e0e0,
-    -10px -10px 20px #ffffff;
+    /*box-shadow:  10px 10px 20px #e0e0e0,*/
+    /*-10px -10px 20px #ffffff;*/
+    background-color: #fff;
 }
+
+section.error {
+    color: #ff0000;
+    animation: 0.5s errorShake 2;
+}
+
 
 section.hide {
     display: none !important;
@@ -36,6 +47,9 @@ section.register > form > img,
 section.login > form > img {
     border-radius: 50%;
     margin: 1em;
+    --size: 12em;
+    width: var(--size);
+    height: var(--size);
 }
 
 section.register > form > input,
@@ -43,8 +57,8 @@ section.login > form > input {
     margin: 1em 0;
     padding: 1em 1.5em;
     border-radius: 0.8em;
-    box-shadow: inset 5px 5px 11px #d1d1d1,
-    inset -5px -5px 11px #ffffff;
+    /*box-shadow: inset 5px 5px 11px #d1d1d1,*/
+    /*inset -5px -5px 11px #ffffff;*/
 }
 
 section.register > form > div.buttons,
@@ -60,18 +74,15 @@ section.login > form > div.buttons {
 
 section.register > form > div.buttons > button:active,
 section.login > form > div.buttons > button:active {
-    box-shadow: inset 5px 5px 11px #d1d1d1,
-    inset -5px -5px 11px #ffffff;
+    /*box-shadow:  10px 10px 20px #ffffff, -10px -10px 20px #e0e0e0;*/
     transition: 200ms;
 }
 
 section.register > form > div.buttons > button,
 section.login > form > div.buttons > button {
-    background-color: #fff;
     border-radius: 0.8em;
-    box-shadow:  10px 10px 20px #e0e0e0,
-    -10px -10px 20px #ffffff;
-    color: #333333;
+    /*box-shadow:  10px 10px 20px #e0e0e0,*/
+    /*-10px -10px 20px #ffffff;*/
     padding: 1em 1.5em;
     margin: 0 1em;
     cursor: pointer;

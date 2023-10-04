@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../public/media/style/main.css">
     <link rel="stylesheet" href="../public/media/style/login.css">
+    <link rel="stylesheet" href="../public/media/style/animation.css">
     <title>Connexion</title>
 </head>
 <body>
@@ -33,7 +34,7 @@ if (isset($error)) {
         <input type="password" name="register_password" placeholder="Mot de passe" required>
         <div class="buttons">
             <button type="button" class="login">J'ai déjà un compte</button>
-            <button type="submit" name="login">Connexion</button>
+            <button type="submit" name="login">Créer</button>
         </div>
     </form>
 </section>
