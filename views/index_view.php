@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Liste des foyers</title>
+    <link rel="stylesheet" href="../public/media/style/main.css">
+    <link rel="stylesheet" href="../public/media/style/index.css">
 </head>
 <body>
 <header>
@@ -16,6 +18,9 @@
 <main>
 
     <?php
+    if (isset($error)) {
+        echo "<p class=\"error\">" . $error . "</p>";
+    }
     foreach ($homes as $home) {
     ?>
         <a href="../controllers/home.php?id=<?= $home["id"] ?>" class="home">

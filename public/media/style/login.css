@@ -45,7 +45,6 @@ section.register > form {
 
 section.register > form > img,
 section.login > form > img {
-    border-radius: 50%;
     margin: 1em;
     --size: 12em;
     width: var(--size);

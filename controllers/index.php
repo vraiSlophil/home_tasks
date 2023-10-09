@@ -30,6 +30,8 @@ $homes = $database->executeQuery("SELECT DISTINCT homes.* FROM homes JOIN users 
 );
 
 if ($homes instanceof PDOException) {
+    $error = $homes->getMessage();
     $homes = [];
 }
+
 require "../views/index_view.php";
